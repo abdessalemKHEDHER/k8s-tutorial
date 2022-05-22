@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: app-rest
-          image: samplerest:latest
+          image: rest:latest
           imagePullPolicy: Never
           ports:
             - containerPort: 5000
@@ -32,5 +32,5 @@ spec:
                 secretKeyRef:
                   name: db-credentials
                   key: db-password
-            - name: MYSQL_URL
+            - name: DB_URL
               value: db-service
